@@ -1,4 +1,6 @@
 <?php
+
+use Twilio\Rest\Client;
 session_start();
 require '../vendor/autoload.php';
 // connect to mongodb
@@ -16,6 +18,7 @@ if(isset($_SESSION['id'])) {
     $patient_id = $_SESSION['id'];
     $doc_name = $_POST['Doctor_name'];
     $Time_slot = $_POST['Time_slot'];
+    $ph=$_POST['contact_no'];
     $appointment_date = date('Y-m-d', strtotime($_POST['appointment_date']));
     echo " line 20  ";
     // Find doctor by name
@@ -47,8 +50,20 @@ if(isset($_SESSION['id'])) {
                 'app_time' => $Time_slot,
                 'app_id' => $app_id
             );
+
             echo "  line 50  ";
             $appointmentCollection->insertOne($new_appointment);
+            $account_id="ACc48272c64f6b7419e2b52f2046b4fcde";
+            $auth_token="902d267667dfeb7504e6f102b047eb1a";
+            $client=new Twilio\Rest\Client($account_id,$auth_token);
+            $twilio_number="+19102924334";
+            $client->messages->create(
+                '+91 81800 67593',
+                [
+                    "from"=>$twilio_number,
+                    "body"=>"hello"
+                ]
+                );
             header('location:appointment_confirm.html');
             exit;
         }
