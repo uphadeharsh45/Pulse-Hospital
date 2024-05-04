@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="record_new.css" class="stylesheet">
+    <title>Add Records</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="Group 3.png" alt="Pulse Multispeciality">
+            <a href="home_pg/home.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="add_record">
+            <form action="store_record.php" method="post">
+                <div class="form_heading">ADD RECORDS</div>
+                <br><br>
+
+                <input type="text" placeholder="  Enter Patient ID" name="patient_id" class="inrecord">
+
+                <textarea name="feedback" cols="10" rows="5" class="inrecord"        placeholder="  Feedback" id="textarea"></textarea>
+
+                <textarea name="prescription" cols="10" rows="5" class="inrecord" 
+                id="textarea" placeholder="  Prescription"></textarea>
+<div class="centre">
+                <input type="date" placeholder=" Enter the date" name="date" class=" datefunc">
+                <br>
+                <div class="Time_slot">
+                    <select name="Time_slot" id="Time_slot">
+                        <option value="Select_Time_slot">Select The Time Slot</option>
+                        <option value="9am-10am">9am-10am</option>
+                        <option value="10am-11am">10am-11am</option>
+                        <option value="11am-12pm">11am-12pm</option>
+                        <option value="12pm-1pm">12pm-1pm</option>
+                        <option value="1pm-2pm">1pm-2pm</option>
+                        <option value="3pm-4pm">3pm-4pm</option>
+                        <option value="4pm-5pm">4pm-5pm</option>
+                      </select>
+                </div>
+            </div><br>
+                <br>
+                <div class="centre">
+                <button type="submit" class="inrecord">Submit</button>
+                <button type="reset" class="inrecord">Reset</button></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Pulse Multispeciality Hospital</p>
+    </footer>
+</body>
+
+</html>

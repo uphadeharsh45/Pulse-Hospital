@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Account</title>
+    <link rel="stylesheet" href="register_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img src="Group 3.png" alt="Pulse Multispeciality">
+        <a href="../home_pg/home.html">Home</a>
+    </nav>
+    <div class="main">
+    <div class="container">
+        <div class="typing">
+            <img src="register_page.jpg" alt="appointment image" width="650px" style="margin-top: 60px; margin-left: 60px;">
+        </div>
+        <div class="form-body">
+            <form action="register.php" method="post">
+                <div class="form_heading">SIGN UP</div>
+                <br>               
+                <input type="text" placeholder="  Your Name" name="patient_name" id="patient_name" required>
+                <br><br>
+                <input type="text" placeholder="  Your Phone Number" name="contact_no" id="contact_no" required>
+                <br><br>
+                <div class="gender">
+                <input type="text" placeholder="  Your Age" name="age" id="age" required style="width: 120px;">
+                <select name="gender" id="gender" style="width: 130px;margin-left: 5px;" required>
+                    <option value="Select_Gender">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <br>
+                    <input type="text" placeholder="  Blood Group" name="blood_group" id="blood_group" required style="width: 120px;">
+                </select>
+                </div>
+               
+                <br>
+                <textarea name="address" id="address" placeholder="
+  Enter Your Address" cols="40" rows="3" required></textarea>
+                <br><br>
+                <input type="text" placeholder="  Your Patient ID" name="patient_id" id="Patient_id" maxlength="8" required>
+                <br><br>
+                <input type="password" placeholder="  Select Password" name="password" id="password" maxlength="8" required>
+                <br><br>
+                <input type="password" placeholder="  Confirm Password" name="confirm_password" id="confirm_password" maxlength="8" required>
+                <br><br>
+                <button class="btn" >REGISTER</button>
+                <div class="already_signed">Already a Member?<a href="">Sign in</a></div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>Copyright &copy; Pulse Multispeciality Hospital</p>
+</footer>
+</body>
+</html>

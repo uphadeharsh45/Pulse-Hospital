@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css" class="stylesheet">
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="Group 3.png" alt="Pulse Multispeciality" >
+            <a href="home_pg/home.html" class="home_but">Home</a>
+        </nav>
+    </header>
+    <main class="main">
+        <img src="login.jpg" alt="Medicines" class="side_img  img" >
+
+        <div class="container">
+            <form action="login_check.php" method="post">
+                <div class="form_heading">LOGIN</div>
+                <br>
+                <select name="category" class="inform" style="width: 315px;height: 58px;" required>
+                    <option value="who_are_you">Who are you?</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Patient">Patient</option>
+                </select>
+
+                <input type="text" placeholder="Enter ID" name="id" class="inform" required>
+
+                <input type="password" placeholder="Enter Password" name="password" class="inform" required maxlength="8">
+
+                <button type="submit" class="inform">Login</button>
+                <!-- <button type="reset" class="inform">Reset</button> <br> -->
+                <div class="new_user">New User?<a href="records\register_page.html">Register</a></div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; Pulse Multispeciality Hospital</p>
+    </footer>
+</body>
+
+</html>

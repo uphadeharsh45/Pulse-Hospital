@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F0F0F8;
+}
+
+nav img,
+a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+nav a {
+    padding: 1rem;
+    margin-right: 1rem;
+
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #FF3444;
+    color: white;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    font-weight: 800;
+}
+
+nav a:hover {
+    color: #FF3444;
+    background-color: #F0F0F8;
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #FF3444;
+    color: #F0F0F8;
+}
+
+.box {
+    height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookappointment {
+    width: 23vw;
+    height: 60vh;
+    border-radius: 25px;
+    background: linear-gradient(45deg, rgb(234 236 239), #e0cef9);
+    box-shadow: 10px 10px 0px rgba(137, 132, 132, 0.27);
+}
+
+.centre1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centre a {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    width: fit-content;
+}

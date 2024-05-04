@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="appoinment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    background-color: #FF3444;
+    color: #F0F0F8;
+}
+    </style>
+</head>
+<body><div class="main">
+    <nav>
+        <img src="Group 3.png" alt="Pulse Multispeciality" height="90%" width="auto">
+        <a href="home_pg/home.html">Home</a>
+    </nav>
+    <div class="container">
+        <div class="typing">
+            <img src="typing_man.png" alt="appointment image" width="530px" >
+        </div>
+        <div class="form-body">
+            <form action="book_appointment.php" method="post">
+                <div class="form_heading">Book Appointment</div>
+                <br>                
+                <input type="text" placeholder="  Your Name" name="patient_name" id="patient_name">
+                <br><br>
+                <input type="text" placeholder="  Your Phone Number" name="contact_no" id="contact_no" maxlength="10">
+                <br><br>
+                <input type="date" name="appointment_date" id="appointment_date">
+                <br><br>
+                <div class="Doctor_name" >
+                    <select name="Doctor_name" id="Doctor_name" autocomplete="off" required>
+                            <option value="Select Doctor">Select Doctor</option>
+                            <optgroup label="Gynaecologist">
+                              <option value="Diva">Dr.Diva</option>
+                            </optgroup>
+                            <optgroup label="Dermatologist">
+                              <option value="Pranav Somawanshi">Dr.Somawanshi</option>
+                            </optgroup>
+                            <optgroup label="Neurologist">
+                              <option value="Abhijeet Patil">Dr.Patil</option>
+                            </optgroup>
+                            <optgroup label="Brain Surgeon">
+                              <option value="Harshavardhan Uphade">Dr.Uphade</option>
+                            </optgroup>
+                            <optgroup label="Cardiologist">
+                              <option value="Om More">Dr.More</option>
+                            </optgroup>
+                            <optgroup label="Physician">
+                              <option value="Abhishek Tekale">Dr.Tekale</option>
+                            </optgroup>
+                    </select>
+                </div>
+                <br>
+                <div class="Time_slot">
+                    <select name="Time_slot" id="Time_slot">
+                        <option value="Select_Time_slot">Select The Time Slot</option>
+                        <option value="9am-10am">9am-10am</option>
+                        <option value="10am-11am">10am-11am</option>
+                        <option value="11am-12pm">11am-12pm</option>
+                        <option value="12pm-1pm">12pm-1pm</option>
+                        <option value="1pm-2pm">1pm-2pm</option>
+                        <option value="3pm-4pm">3pm-4pm</option>
+                        <option value="4pm-5pm">4pm-5pm</option>
+                      </select>
+                </div>
+                <br><br>
+                <button class="btn" >BOOK NOW</button>
+            </form>
+        </div>
+    </div>
+  </div>
+<footer>
+    <p>Copyright &copy; Pulse Multispeciality Hospital</p>
+</footer>
+    
+</body>
+</html>

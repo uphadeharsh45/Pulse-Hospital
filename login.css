@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    user-select: none;
+}
+
+header nav {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F0F0F8;
+}
+
+nav img,
+a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+.home_but{
+    padding: 1rem;
+    margin-right: 1rem;
+
+}
+nav a {
+    text-decoration: none;
+    background-color: #FF3444;
+    color: white;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main{
+    height: 80vh;
+}
+.form_heading {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.side_img {
+    width: 50rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* padding-left: 120px; */
+    align-items: center;
+    /* padding: 1rem; */
+    border-radius: 50px;
+    background: #F0F0F8;
+    width: 500px;
+    box-shadow: 2px 5px 0px 2px #FF3444;
+    height: 65vh;
+}
+
+/* b,a{
+    padding-left: 100px;
+} */
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+
+.inform {
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.container select,
+input,
+button {
+    background-color: white;
+    border: 0.1rem solid #FF3444;
+    border-radius: 0.75rem;
+    width: 300px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.container select,
+input {
+    opacity: 1;
+}
+
+/* .new {
+    padding-bottom: 2rem;
+} */
+
+.container a {
+    text-decoration: none;
+}
+
+.container button {
+    background-color: #FF3444;
+    color: #F0F0F8;
+    transition: all 0.3s ease;
+}
+
+.container legend {
+    font-weight: bold;
+}
+
+.container button:hover {
+    color: #FF3444;
+    background-color: #F0F0F8;
+    border: none;
+}
+
+nav a:hover {
+    color: #FF3444;
+    background-color: #F0F0F8;
+    box-shadow: 2px 5px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color: #FF3444;
+    color: #F0F0F8;
+}
+.inform{
+    width: 300px;
+}
+.img{
+    width: auto;
+    height:65vh ;
+}
