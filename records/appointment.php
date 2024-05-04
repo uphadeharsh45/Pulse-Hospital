@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table{
+        /* table{
             margin-left:100px;
-        }
+        } */
 *{
     margin: 0;
     padding: 0;
@@ -37,23 +37,26 @@ nav a:hover {
     color: #FF3444;
     background-color: #F0F0F8;
 }
-table{
-    /* margin: 5vh 80vh; */
+div{
+    border: 1px solid black;
+    height: 10vh;
+}
+/* table{
     margin-left:auto;
     margin-right:auto;
     margin-top:3vh;
     border-color:white;
     border-spacing:0px;
-}
-th,td{
+} */
+/* th,td{
     font-size:2.5vh;
     padding:1vh 3vh;
-}
-th{
+} */
+/* th{
     background-color:#FF3444;
     color:white;
-}
-.full{
+} */
+/* .full{
     border: 0.5vh solid #FF3444;
     border-radius: 4vh;
     font-size: 5vh;
@@ -66,7 +69,7 @@ th{
     margin-right: auto;
     margin-top: 10vh;
     background-color: #F0F0F8;
-}
+} */
     </style>
 </head>
 <body>
@@ -92,9 +95,9 @@ $appointmentCollection = $db->selectCollection('appointment');
 $app_id = $_GET['uname'];
 $patient_id=$_SESSION['id'];
 $result = $rcollection->findone(['app_id'=>$app_id  ]);
-echo '<table border="1"><tr><th>Feedback</th><th>Prescription</th></tr>';
+echo '<div classname="details"><p>Feedback:'. $result['feedback'] .'</p><p>Prescription:'. $result['prescription'] .'</p></div>';
    
-if($result) echo '<tr><td>'. $result['feedback'] ." ". '</td><td>'. $result['prescription'] ." ".'</td></tr>';
+// if($result) echo '<tr><td>'. $result['feedback'] ." ". '</td><td>'. $result['prescription'] ." ".'</td></tr>';
 
 
 ?>
