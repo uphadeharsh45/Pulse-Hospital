@@ -49,7 +49,7 @@ main {
 }
 
 .side_img {
-    width: 50rem;
+    width: 40vw;
 }
 
 .container {
@@ -138,14 +138,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8vh;
+    height: 10vh;
     background-color: #FF3444;
     color: #F0F0F8;
 }
 .inform{
     width: 300px;
 }
-.img{
+/* .img{
     width: auto;
     height:65vh ;
+} */
+.alert{
+    height: 10vh;
+    background-color: red;
 }

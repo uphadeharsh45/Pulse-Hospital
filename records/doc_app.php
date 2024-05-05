@@ -12,7 +12,7 @@
             user-select: none;
         }
 
-nav {
+        nav {height: 11vh;
     display: flex;
     justify-content: space-between;
     align-items: center;

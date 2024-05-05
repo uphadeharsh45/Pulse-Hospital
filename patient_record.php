@@ -14,17 +14,19 @@
     font-family: Montserrat;
     user-select: none;
 }
-nav {
+nav {height: 11vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #F0F0F8;
 }
+
 nav img,
 a {
     padding: 1rem;
     margin: 0 1rem;
 }
+
 nav a {
     text-decoration: none;
     background-color: #FF3444;
@@ -33,6 +35,7 @@ nav a {
     transition: all 0.3s ease;
     font-weight: 800;
 }
+
 nav a:hover {
     color: #FF3444;
     background-color: #F0F0F8;
@@ -109,7 +112,7 @@ $p_id=$pat_id['_id'];
 //$patient_name=$_POST['Patient_name'];
 $appointment = $appointmentCollection->find(['patient_id'=>$p_id ,'doctor_id'=>$doctor_id ]);
 //var_dump($appointment);
-echo '<table border="1"><tr><th>App date</th><th>App Time</th><th>Doctor name</th><th>view details</th></tr>';
+echo '<table border="1"><tr><th>App date</th><th>App Time</th><th>Doctor name</th><th>View details</th></tr>';
 foreach($appointment as $appoint){
 
     $appointment_id=$appoint['app_id'];

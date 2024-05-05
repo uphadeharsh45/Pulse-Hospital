@@ -15,8 +15,11 @@
             <a href="home_pg/home.html">Home</a>
         </nav>
     </header>
-
-    <main>
+    <div class="container">
+        <div class="typing">
+            <img src="images/add_records.png" alt="appointment image" width="430vw" style="margin-left: 10vw; margin-top: 10vh;" >
+        </div>  
+    <!-- <main> -->
         <div class="add_record">
             <form action="store_record.php" method="post">
                 <div class="form_heading">ADD RECORDS</div>
@@ -24,12 +27,14 @@
 
                 <input type="text" placeholder="  Enter Patient ID" name="patient_id" class="inrecord">
 
-                <textarea name="feedback" cols="10" rows="5" class="inrecord"        placeholder="  Feedback" id="textarea"></textarea>
+                <textarea name="feedback" cols="40" rows="3" class="inrecord" placeholder="
+  Feedback" id="textarea"></textarea>
 
                 <textarea name="prescription" cols="10" rows="5" class="inrecord" 
-                id="textarea" placeholder="  Prescription"></textarea>
+                id="textarea" placeholder="
+  Prescription"></textarea>
 <div class="centre">
-                <input type="date" placeholder=" Enter the date" name="date" class=" datefunc">
+                <input type="date" placeholder=" Enter the date" name="date" class=" datefunc" max={formattedDate}>
                 <br>
                 <div class="Time_slot">
                     <select name="Time_slot" id="Time_slot">
@@ -50,8 +55,8 @@
                 <button type="reset" class="inrecord">Reset</button></div>
             </form>
         </div>
-    </main>
-
+    <!-- </main> -->
+    </div>
     <footer>
         <p>Copyright &copy; Pulse Multispeciality Hospital</p>
     </footer>
@@ -62,7 +67,21 @@
         if (error === 'notexist') {
             alert("Sorry, this appointment does not exist");
         }
-    </script>
+        //  const today = new Date();
+        // const year = today.getFullYear();
+        // const month = String(today.getMonth() + 1).padStart(2, '0');
+        // const day = String(today.getDate()).padStart(2, '0');
+        // const formattedDate = ${year}-${month}-${day};
+        // console.log(formattedDate);
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        const formattedDate = `${year}-${month}-${day}`;
+        console.log(formattedDate);
+        document.getElementsByName("date")[0].setAttribute('max', formattedDate);
+         
+        </script>
 </body>
 
 </html>
