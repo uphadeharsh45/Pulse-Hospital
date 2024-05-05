@@ -14,17 +14,20 @@
     font-family: Montserrat;
     user-select: none;
 }
-nav {
+
+nav {height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #F0F0F8;
 }
+
 nav img,
 a {
     padding: 1rem;
     margin: 0 1rem;
 }
+
 nav a {
     text-decoration: none;
     background-color: #FF3444;
@@ -33,6 +36,7 @@ nav a {
     transition: all 0.3s ease;
     font-weight: 800;
 }
+
 nav a:hover {
     color: #FF3444;
     background-color: #F0F0F8;
@@ -72,7 +76,7 @@ th{
 <body>
 <nav>
         <img src="Group 3.png" alt="Pulse Multispeciality">
-        <a href="home_pg/home.html">Home</a>
+        <a href="../home_pg/home.html">Home</a>
 </nav>
 <br>;
 <br>;
@@ -92,7 +96,7 @@ $appointmentCollection = $db->selectCollection('appointment');
 
 $patient_id=$_SESSION['id'];
 $appointment = $appointmentCollection->find(['patient_id'=>$patient_id  ]);
-echo '<table border="1"><tr><th>App date</th><th>App Time</th><th>Doctor name</th><th>view details</th></tr>';
+echo '<table border="1"><tr><th>App date</th><th>App Time</th><th>Doctor name</th><th>View details</th></tr>';
 foreach($appointment as $appoint){
 
     $appointment_id=$appoint['app_id'];
