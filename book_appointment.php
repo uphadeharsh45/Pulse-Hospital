@@ -1,6 +1,7 @@
 <?php
 
 use Twilio\Rest\Client;
+use Dotenv\Dotenv as Dotenv;
 session_start();
 require '../vendor/autoload.php';
 // connect to mongodb
@@ -53,8 +54,10 @@ if(isset($_SESSION['id'])) {
 
             echo "  line 50  ";
             $appointmentCollection->insertOne($new_appointment);
-            $account_id="ACa005c39119264f59facf810b79193d80";
-            $auth_token="4fa9ac7333805f25855ca2c7b88de535";
+            $dotenv=Dotenv::createImmutable( __DIR__ );
+            $dotenv->load();
+            $account_id=$_ENV['ACCID'];
+            $auth_token=$_ENV['TOKEN'];
             $client=new Twilio\Rest\Client($account_id,$auth_token);
             $twilio_number="+18155724230";
             $client->messages->create(
