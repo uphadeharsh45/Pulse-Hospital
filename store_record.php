@@ -21,16 +21,22 @@ if(isset($_SESSION['id']))
     var_dump($appointment_date);
     $appointment = $appointmentCollection->findOne(['doctor_id' => $dt['doctor_id'],'app_time'=>$Time_slot,'app_date'=>$appointment_date]);
     var_dump($appointment);
+    if($appointment==NULL){
+        header('location:record_new.html?error=notexist');
+    }
     //echo $appointment['app_id']." "."<br>";
-   $document = [
-    'app_id' => $appointment['app_id'],
-    'feedback' => $feedback,
-    'prescription' => $prescription
-    
-];
-$collection->insertOne($document);
-
-header('location:record_stored.html'); 
+    else{
+        $document = [
+            'app_id' => $appointment['app_id'],
+            'feedback' => $feedback,
+            'prescription' => $prescription
+            
+        ];
+        $collection->insertOne($document);
+        
+        header('location:record_stored.html'); 
+    }
+  
 
 }
 

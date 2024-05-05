@@ -55,6 +55,14 @@
     <footer>
         <p>Copyright &copy; Pulse Multispeciality Hospital</p>
     </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get('error');
+    
+        if (error === 'notexist') {
+            alert("Sorry, this appointment does not exist");
+        }
+    </script>
 </body>
 
 </html>

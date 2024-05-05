@@ -13,6 +13,10 @@ $doctorCollection =$db->selectCollection('doctor');
 $cat=$_POST['category'];
 $id=$_POST['id'];
 $pass=$_POST['password'];
+if($cat=="who_are_you"){
+    
+    header('Location: login.html');
+}
 if($cat=="Patient"){
     $patient_id=$id;
     $password=$pass;
@@ -25,12 +29,12 @@ if($cat=="Patient"){
         exit;
         }
         else {
-            header('Location: login.html');
+            header('Location: login.html?error=invalid');
             exit;
          }
     }
     else {
-        header('Location: login.html');
+        header('Location: login.html?error=invalid');
         exit;
      }
   } 
@@ -44,8 +48,12 @@ if($cat=="Patient"){
         header('Location: doctor_login.html');
         exit;
         }
+        else {
+            header('Location: login.html?error=invalid');
+            exit;
+         }
     } else {
-        header('Location: login.html');
+        header('Location: login.html?error=invalid');
         exit;
     }
 }

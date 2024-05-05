@@ -53,15 +53,15 @@ if(isset($_SESSION['id'])) {
 
             echo "  line 50  ";
             $appointmentCollection->insertOne($new_appointment);
-            $account_id="ACc48272c64f6b7419e2b52f2046b4fcde";
-            $auth_token="902d267667dfeb7504e6f102b047eb1a";
+            $account_id="ACa005c39119264f59facf810b79193d80";
+            $auth_token="4fa9ac7333805f25855ca2c7b88de535";
             $client=new Twilio\Rest\Client($account_id,$auth_token);
-            $twilio_number="+19102924334";
+            $twilio_number="+18155724230";
             $client->messages->create(
-                '+91 81800 67593',
+                '+91 98904 57247',
                 [
                     "from"=>$twilio_number,
-                    "body"=>"hello"
+                    "body"=>"Hello !, Your appointment with Dr.".$doc_name." has been booked on ".$appointment_date
                 ]
                 );
             header('location:appointment_confirm.html');

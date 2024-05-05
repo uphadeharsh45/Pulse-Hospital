@@ -10,10 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+      
     <nav>
         <img src="Group 3.png" alt="Pulse Multispeciality">
         <a href="../home_pg/home.html">Home</a>
     </nav>
+    
     <div class="main">
     <div class="container">
         <div class="typing">
@@ -25,7 +28,7 @@
                 <br>               
                 <input type="text" placeholder="  Your Name" name="patient_name" id="patient_name" required>
                 <br><br>
-                <input type="text" placeholder="  Your Phone Number" name="contact_no" id="contact_no" required>
+                <input type="text" placeholder="  Your Phone Number" name="contact_no" id="contact_no" minlength="10" maxlength="10" required>
                 <br><br>
                 <div class="gender">
                 <input type="text" placeholder="  Your Age" name="age" id="age" required style="width: 120px;">
@@ -62,7 +65,7 @@
                 <input type="password" placeholder="  Confirm Password" name="confirm_password" id="confirm_password" maxlength="8" required>
                 <br><br>
                 <button class="btn" >REGISTER</button>
-                <div class="already_signed">Already a Member?<a href="">Sign in</a></div>
+                <div class="already_signed">Already a Member?<a href="../login.html">Sign in</a></div>
             </form>
         </div>
     </div>
@@ -70,5 +73,17 @@
 <footer>
     <p>Copyright &copy; Pulse Multispeciality Hospital</p>
 </footer>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get('error');
+
+    if (error === 'password') {
+        alert("Sorry, passwords did not match. Please enter information again.");
+    } else if (error === 'id') {
+        alert("The ID you entered already exists. Please enter information again.");
+    }
+</script>
+
+
 </body>
 </html>

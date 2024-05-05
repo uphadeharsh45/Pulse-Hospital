@@ -27,7 +27,7 @@ $pass1 = $_POST['password'];
 // Check if passwords match
 if ($pass != $pass1) {
     echo $str1 . "<br>";
-    header('location:register_page.html');
+    header('location:register_page.html?error=password');
     exit; // Stop further execution
 }
 
@@ -35,7 +35,7 @@ if ($pass != $pass1) {
 $result = $collection->findOne(['patient_id' => $patient_id]);
 if ($result) {
     echo $str2 . "<br>";
-    header('location:register_page.html');
+    header('location:register_page.html?error=id');
     exit; // Stop further execution
 }
 
