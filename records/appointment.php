@@ -46,7 +46,7 @@ nav a:hover {
     max-width: 50vw;
     border: 0.5vh solid #FF3444;
     border-radius: 4vh;
-    font-size: 5vh;
+    font-size: 4vh;
     font-weight: 600;
     text-align: center;
     padding: 6vh;

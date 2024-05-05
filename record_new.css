@@ -11,18 +11,13 @@ body {
     
     background-size: cover;
 }
-main{
-    background-image: url("images/back3.jpg");
-    background-size:contain;
-
-}
  nav {
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #F0F0F8;
-    box-shadow: 0 0 10px black;
+    /* box-shadow: 0 0 10px black; */
     z-index: 1;
 }
 
@@ -53,6 +48,11 @@ z-index: 0;
     align-items: center;
     /* padding: 1rem; */
 }
+.container {
+    display: flex;
+    /* margin-left: 20vw; */
+    height: 83vh;
+}
 .form_heading {
     font-size: 30px;
     font-weight: 600;
@@ -60,18 +60,18 @@ z-index: 0;
 }
 
 .add_record{
-    height: 83vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     float: left;
-    margin-left: 45vw;
+    margin-left: 20vw;
 }
 .add_record form {
    border-radius: 25px;
     background: #F0F0F8;
     box-shadow: 2px 5px 0px 2px #FF3444;
-    width: 25vw;
     height: 65vh;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +80,7 @@ z-index: 0;
 }
 
 .add_record .inrecord {
-    margin: 1rem;
+    margin: 1.8vh;
     display: flex;
     align-items: center;
 }
@@ -120,7 +120,7 @@ footer {
     height: 117px;
     background-color: #FF3444;
     color: #F0F0F8;
-    box-shadow: 0 0 10px black;
+    /* box-shadow: 0 0 10px black; */
 z-index: 1;
 }
 #textarea{
